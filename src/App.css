@@ -1,0 +1,342 @@
+/*css*/
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://imgs.search.brave.com/TeJw15zekNtKUa4SGPc9J4mwUck4V0wdYGSvDVi2Fqw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA4LzE5LzU0LzE2/LzM2MF9GXzgxOTU0/MTY5NF9EWkx4Z1JE/dGoyYXRzQ3JmbDc1/dFJuWXhjTFEwYVVP/bC5qcGc');
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  width: 100vw;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"], form input[type="tel"] {
+  padding: 10px;
+  margin: 4px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+
+form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+
+input:focus {
+  border-color: #5151E5;
+  box-shadow: 0 0 10px rgba(81, 81, 229, 0.4);
+  outline: none;
+}
+form button {
+  background-color: #4CAF50;
+  color: rgb(6, 38, 55);
+  font-weight: bold;
+  padding: 15px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+form button:hover {
+  background-color: #d4d234;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3e8a5c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(140, 39, 39, 0.3);
+  transition: all 0.6s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+  background: #d4d234;
+  color: #d32165;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/* Dashboard.css */
+
+.dashboard-container {
+  padding: 20px;
+  background-color: #bc9f5a;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+
+
+
+.signup-container, .dashboard-container {
+  max-width: 400px;
+  margin:  auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 18px 15px 10px rgba(241, 7, 7, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+
+h2 {
+  margin-bottom: 20px;
+  color: rgb(2, 72, 109);
+  /* color: #11eebe; */
+}
+
+
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.signup-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Changed to cover 90% of the webpage width */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.left-panel, .right-panel {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error-message{
+  color: red;
+}
+
+
+.signup-container {
+  display: flex;
+  width: 100%;
+  max-width: 80%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgb(139, 179, 206);
+}
+
+.left-panel {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+.right-panel {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+}
+
+.left-panel {
+  background-image:url('https://imgs.search.brave.com/MtSDQqsv7Pev_XUsRfC6xnks03l3ojMlaHihmNheHMQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9h/YnN0cmFjdC1uYXZ5/LWJsdWUtZGlnaXRh/bC1ncmlkLXRlY2hu/b2xvZ3ktYmFja2dy/b3VuZF81Mzg3Ni0x/MDI2MTguanBnP3Np/emU9NjI2JmV4dD1q/cGc');
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: white;
+  text-align: center;
+}
+
+.left-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.left-panel p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.right-panel {
+  background-color: #ffffff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.terms_Policy{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+#terms{
+  width: 18px;
+  height: 22px;
+  box-shadow: none;
+
+}
+
+
+
+.profile-section {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+}
+
+.profile-images {
+  display: flex;
+  margin-right: 10px;
+}
+
+.profile-img {
+  width: 40px; /* Set the width for the images */
+  height: 40px; /* Set the height for the images */
+  border-radius: 50%; /* Make the images circular */
+  margin-right: -10px; /* Slight overlap */
+  border: 1px solid rgb(118, 77, 207); /* Add a white border to each image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+.profile-text {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  padding-top: 10px;
+}
+
+
+.signup-link ,.signin-link {
+  text-align: center;
+  margin-top: 8px;
+}
+.require{
+  color: red;
+  font-size: x-large;
+
+}
+
+
+form input, form button {
+  transition: all 0.7s ease;
+}
+
+form input:focus, form button:hover {
+  transform: scale(1.05);
+}
