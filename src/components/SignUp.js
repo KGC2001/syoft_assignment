@@ -32,6 +32,9 @@ const SignUp = () => {
             setEmailError('');
         }
     };
+    const handleloginRedirect = () => {
+        navigate('/login'); // Make sure you have a route defined for '/signup'
+    };
 
     
     const handleSubmit = async (e) => {
@@ -121,7 +124,7 @@ const SignUp = () => {
                         <label htmlFor="terms">I agree to the Terms of Service and Privacy Policy</label>
                     </div>
                     <button type="submit">Create your free account</button>
-                    <p>Already have an account? <a href="/login" className="signin-link">Sign in</a></p>
+                    <p>Already have an account? <a href="/login" onClick={handleloginRedirect} className="signin-link">Sign in</a></p>
                 </form>
             </div>
         </div>
